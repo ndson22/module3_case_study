@@ -1,0 +1,533 @@
+/* ==========================================================================================
+  Theme Name: Bizz
+  Author: VS_THEMES
+  Support: visakhinkollam@gmail.com
+  Description: Bizz - Business Consulting and Agency HTML Template
+  Version: 1.0
+========================================================================================== */
+
+
+/*-------------------------------------------------------
+
+    CSS INDEX
+    ===================
+
+    1. Color black
+    2. Color light white
+    3. Color yellow
+    4. Bg black
+    5. Bg yellow
+    6. Bg light white
+    7. Border Yellow
+    8. Border black
+
+
+-------------------------------------------------------*/
+
+
+/* ....................................
+1. Color black
+.......................................*/
+.black,
+body,
+.form-control,
+.btn-black:hover,
+.input-border,
+.layout-switcher .nav-pills .nav-link.active,
+.layout-switcher .nav-pills .show>.nav-link,
+h1, h2, h3, h4, h5, h6,
+.latest_mawlad_khotba h4 a, .latest_mawlad_khotba h6 a,
+.insta_url,
+.insta_url:hover,
+.grid-author a:hover,
+.post_detail .khotba_inside ul li a,
+.psot_share a,
+.psot_tags a,
+.psot_tags,
+.psot_share,
+.mawlad_venue ul li span,
+.sa-team-social li i:hover,
+.sidebar_nav ul li a,
+.post_meta .meta_admin:hover,
+.sj-product-review ul li a.active,
+.text-custom-black,
+.megamenu .menu-style ul li.active>a,
+.megamenu .menu-style ul li a,
+.menu-item-has-children .sub-menu li.menu-item>a,
+.tabs .nav-tabs .nav-item .nav-link,
+.inventory-subhead .extra-options ul li a,
+.inventory-heading .inventory-view .nav-tabs .nav-item .nav-link,
+
+.text-light-black,
+.category-btn,
+.side-bar .blog-tags a,
+.restaurent-tabs .nav-pills .nav-link.active,
+.filter-sidebar .sidebar-tab>ul>li>a.active{
+    color: #2A324B;
+}
+a:not([href]),
+#back-top a{
+  color: #fff;
+}
+
+
+/* ....................................
+2. Color light white
+.......................................*/
+
+.light-white,
+.icon-bg-quote,
+.quote-right-light {
+    color: #E1E5EE;
+}
+
+
+/* ....................................
+3. Color yellow
+.......................................*/
+.khotba_meta li i,
+.latest_mawlad_khotba h4 a:hover, .latest_mawlad_khotba h6 a:hover,
+.latest_mawlad_khotba .mawlad_date,
+.mawlad_date span,
+.mawlad_info ul li i,
+.khotba_info ul li a:hover,
+.khotba_info h5 a:hover,
+.khotba_inside ul li a:hover,
+.layout-switcher a.active,
+.layout-switcher a:hover,
+.khotba_meta li a:hover,
+.navbar-nav li a:hover, .navbar-nav li a.active,
+.follow_us ul li a:hover,
+.gallery-item.can-popup .thumb::after,
+.post_date a,
+.blog_info h5 a:hover,
+.follow_us ul li a:focus,
+.footer_links a:hover,
+.footer_nav li a:hover,
+.footer_nav li a.active,
+.footer_widget p a:hover,
+.primary-color,
+.insta_url:hover,
+.grid-author a,
+.post_detail .khotba_inside ul li a:hover,
+.psot_share a:hover,
+.psot_tags a:hover,
+.post_meta li i,
+blockquote h6,
+.f__icon,
+.sa-paster-about-area .designation,
+.sa-team-social li a i,
+.btn-link,
+.sidebar_nav ul li a:hover,
+.post_meta .meta_admin,
+.quote-name,
+.sj-shop-tags-meta a:hover,
+.sj-shop-catg-meta a:hover,
+.sj-product-review ul li a:hover,
+.checkout-form .card-title a:hover,
+.login-page a,
+.login-form-s label a,
+.text-custom-red,
+.megamenu .menu-style ul li>a.active,a,a:hover,
+.footer .footer-box .links li>a:hover,
+.our-team-item .thumb .content .social-list li a:hover,
+.our-team-item .thumb .content .social-list li a:hover,
+.sub-header .sub-header-content ul li,
+.car-specification .specifications .table.table-bordered tbody td i,
+.car-specification .contact-box .contact-details ul li span,
+.inventory-heading .inventory-view .nav-tabs .nav-item .nav-link.active,
+.sidebar_wrap .sidebar .sidebar_widgets .tags a:hover,
+a:focus,
+.blog-detail .social-media-box>ul>li>a.gg,
+.blog-detail .post-details-tags-social .tags a:hover,
+.megamenu .menu-style ul li:hover>a,
+.main-navigation nav ul>li.menu-item.active>a,
+.main-navigation nav ul>li.menu-item>a:hover,
+.main-navigation nav ul>li.menu-item:hover>a,
+.main-navigation nav ul>li.menu-item:hover>a, .main-navigation nav ul>li.menu-item.active>a,
+
+
+
+.text-light-green,
+.swiper-button-next:after, .swiper-button-prev:after,
+footer .ft-social-media ul li:hover a,
+.parent-megamenu .megamenu .menu-style ul li.active a,
+span.add-product,
+.green-btn:hover, .green-btn:focus,
+.video_wrapper:hover .video-inner i,
+.text-success,
+.filter-sidebar .sidebar-tab .tab-content .siderbar-innertab>ul>li>a,
+#add-listing-tab .step-steps > li > a > .step-name,
+.breadcrumb-item.active,
+.text-orange,
+#add-restaurent-tab .steps-1 > li > a > .step-name,
+#add-restaurent-tab.step-app .step-content .step-tab-panel label sup,
+.custom-pagination .page-link{
+    color: #F7C59F;
+}
+a:hover{
+  color: #b38766;
+}
+
+.swiper-button-next, .swiper-button-prev{
+  background: : #fff;
+}
+
+/* ....................................
+4. Bg black
+.......................................*/
+.sticky,
+.secondary-bg,
+.footer_bottom,
+.breadcrumb ul li.breadcrumb-item,
+.dark-btn:hover,
+.sj-left-arrow:hover, .sj-right-arrow:hover,
+#back-top a:hover,
+.insta_url:hover,
+.sj_bg_wrap.sj_bg_overlay::before,
+.table.sj-schedules-table .thead-dark th,
+.mawlad_date,
+.mawlad_timer,
+.contact_info,
+.product_content,
+.sj-header,
+.bg-custom-black,
+.animated-button:after,
+.red-btn:before,
+.red-btn:after,
+.car-grid-box .car-grid-wrapper .car-btns,
+
+.car-grid-box .car-grid-wrapper .car-btns:hover:after,
+.car-list-box .car-list-wrapper .car-list-content .car-btns:hover:after,
+.car-list-box .car-list-wrapper .car-list-content .car-btns,
+.skew-btns,
+.skew-btns:hover:after,
+.tooltip-inner,
+
+
+.btn-submit:hover, .btn-submit:focus,
+.bg-black,
+#add-restaurent-tab .steps-1 > li.active > a > .number, #add-restaurent-tab .steps-1 > li.done > a > .number,
+.filters .delivery-slider .irs--flat .irs-handle:hover>i:first-child,
+#add-listing-tab .step-steps > li.active > a > .number,
+#add-listing-tab .step-steps > li.done > a > .number,
+.header .right-side .cart-btn .user-alert-notification,
+.header .right-side .cart-btn .user-alert-cart {
+    background: #2A324B;
+}
+a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
+    background-color: #2A324B!important;
+}
+
+.compare-btn:hover{
+  color: #fff;
+}
+
+/*black bg opacity classes*/
+
+.bg-black-op-9,
+.type4.fixed-nav{
+    background: rgba(42, 50, 75, 0.9);
+}
+
+.bg-black-op-8,
+.mnsry-work .overlay-full {
+    background: rgba(42, 50, 75, 0.8);
+}
+
+.bg-black-op-7 {
+    background: rgba(42, 50, 75, 0.7);
+}
+
+.bg-black-op-6,
+.blog-2-each:hover .blogoverlay-hover,
+.team-img:before {
+    background: rgba(42, 50, 75, 0.6);
+}
+
+.bg-black-op-5 {
+    background: rgba(42, 50, 75, 0.5);
+}
+
+.bg-black-op-4 {
+    background: rgba(42, 50, 75, 0.4);
+}
+
+.bg-black-op-3,
+.blogoverlay-hover {
+    background: rgba(42, 50, 75, 0.3);
+}
+
+.bg-black-op-2,
+.sidebar-left::-webkit-scrollbar-thumb {
+    background: rgba(42, 50, 75, 0.2);
+}
+
+.bg-black-op-1,
+.footer-social li a {
+    background: rgba(42, 50, 75, 0.1);
+}
+
+.bg-black-op-0 {
+    background: rgba(42, 50, 75, 0);
+}
+
+
+/* ....................................
+5. Bg yellow
+.......................................*/
+.sj-navbar .sa_count span,
+.dark-btn,
+.owl-dots div,
+.sj-left-arrow, .sj-right-arrow,
+.sj-video-section a,
+.navbar ul li ul.sub-menu li:hover,
+.insta_url,
+.sj-schedules-table .table-body tr.current,
+.breadcrumb ul li.breadcrumb-item.active,
+.sa-paster-about-area .designation:after,
+.sa-team-social li i:hover,
+.tag_cloud a:hover,
+#sj .sidebar_widgets .sj-price-filter .irs--round .irs-from,
+#sj .sidebar_widgets .sj-price-filter .irs--round .irs-to,
+#sj .sidebar_widgets .sj-price-filter .irs--round .irs-single,
+#sj .irs--round .irs-bar,
+.product_action ul li a:hover,
+.sj-single-product-details-social ul li a:hover,
+.sj-single-product-purches .quantity button:hover,
+.btn,
+.custom-checkbox .custom-control-input:checked~.custom-control-label::before,
+#back-top a,
+.topbar-2 .right-side:before,
+.topbar .left-side:before,
+.animated-button:hover:after,
+.bg-custom-red,
+.cat-box .seprator,
+.megamenu .single-image h5:after,
+.megamenu .menu-style ul li a:after,
+.menu-item-has-children .sub-menu li.menu-item>a:after,
+.tabs .nav-tabs .nav-item .nav-link:hover, .tabs .nav-tabs .nav-item .nav-link.active,
+.nice-select .option:hover,
+.range-slider .slider.slider-horizontal .slider-handle,
+.range-slider .slider.slider-horizontal .slider-selection,
+.about-us-sec .about-left-side .about-list ul li i,
+.car-grid-box .car-grid-wrapper .car-btns:after,
+.car-grid-box .car-grid-wrapper .car-btns:hover,
+.our-articles .post .blog-wrapper .blog-meta .blog-footer:before,
+.our-team-item:hover .thumb .content,
+.download-app-sec .content-wrapper .content-box .content-icon span,
+.compare-product-box .car-type-remove .remove-btn:hover,
+.compare-box .inventory-list ul li:after,
+.about-us-1 .about-left-side:before,
+.about-us-1 .about-right-side .about-list ul li i,
+.page-item:hover .page-link, .page-item.active .page-link,
+.car-list-box .car-list-wrapper .car-list-content .car-btns:after,
+.car-list-box .car-list-wrapper .car-list-content .car-btns:hover,
+.car-specification .car-detail-box .list ul li i,
+.coming-soon .content-wrapper .social-media-icons ul li:hover a,
+.skew-btns:after,
+.skew-btns:hover,
+.shop-detail-content .shop-detail-content-wrapper .quantity button:hover,
+.shop-gallery a.popup:after,
+.blog-detail .social-media-box>ul>li>a.gg:hover,
+.contact-info-box i,
+.cat-box .cat-box-accordion .card .card-body>ul>li:hover>a,
+ .cat-box .cat-box-accordion .card .card-header button:hover,
+ .gallery .grid .grid-item a:after,
+
+
+ .btn-submit,
+ .bg-light-green,
+ .category-btn:hover, .category-btn:focus,
+ .green-btn,
+ .social-media li:hover,
+ #add-restaurent-tab .steps-2 > li.done a.add-res-tab, #add-restaurent-tab .steps-2 > li.active a.add-res-tab,
+ .filter-sidebar .sidebar-tab .tab-content .siderbar-innertab>ul>li>a.active,
+ .filters .rating button:hover,
+ .filters .delivery-slider .irs--flat .irs-handle>i:first-child,
+ .filters .delivery-slider .irs--flat .irs-from, .filters .delivery-slider .irs--flat .irs-to, .filters .delivery-slider .irs--flat .irs-single,
+ .filters .delivery-slider .irs--flat .irs-bar,
+ #scrollstyle-4::-webkit-scrollbar-thumb,
+ .custom-pagination .page-item.active .page-link,
+ .custom-pagination .page-item .page-link:hover,
+ .payment-option-tab>.nav>.nav-item>.nav-link.active,
+ .driver-tip-sec>.nav>.nav-item>.nav-link.active,
+ .driver-tip-sec .tip-percentage input[type=radio]:checked + span,
+ label.custom-checkbox input:checked ~ .checkmark,
+ .countdown-box .time-box,
+ #add-listing-tab .step-steps > li.done:before,
+ .banner-adv,
+ .header .user-details>a>span:after,
+ .header .mobile-address .delivery-add span.address:before,
+  .header .mobile-address .delivery-add span.address:after,
+  .header .search-form span.address:before,
+  .header .search-form span.address:after, 
+
+ .header .user-details>a>span:before, 
+ .header .user-details>a>span:after,
+ .how-it-works .how-it-works-box .how-it-works-box-inner .icon-box {
+    background:  #F7C59F;
+}
+
+.btn-submit:hover,
+.filters .delivery-slider .irs--flat .irs-handle>i:first-child:hover{
+  background: #b38766;
+}
+.bg-gradient-red {
+    background-image: linear-gradient(to right, #F7C59F, #b38766);
+}
+
+
+.nice-select .option.selected{
+background-color:  #fff;
+}
+
+/*yellow bg opacity classes*/
+
+.bg-yellow-op-9 {
+    background: rgba(247, 197, 159, 0.9);
+}
+
+.bg-yellow-op-8 {
+    background: rgba(247, 197, 159, 0.8);
+}
+
+.bg-yellow-op-7 {
+    background: rgba(247, 197, 159, 0.7);
+}
+
+.bg-yellow-op-6 {
+    background: rgba(247, 197, 159, 0.6);
+}
+
+.bg-yellow-op-5 {
+    background: rgba(247, 197, 159, 0.5);
+}
+
+.bg-yellow-op-4,
+.sj-video-header .overlay {
+    background: rgba(247, 197, 159, 0.4);
+}
+
+.bg-yellow-op-3 {
+    background: rgba(247, 197, 159, 0.3);
+}
+
+.bg-yellow-op-2 {
+    background: rgba(247, 197, 159, 0.2);
+}
+
+.bg-yellow-op-1 {
+    background: rgba(247, 197, 159, 0.1);
+}
+
+
+/* ....................................
+6. Bg  light white
+.......................................*/
+
+.bg-light-white,
+.about-me[data-overlay]::before,
+.quote-nav,
+.blog-2[data-overlay]::before,
+.subscribe:hover,
+.flipper .back {
+    background: #E1E5EE;
+}
+
+
+/* ....................................
+7. Border Yellow
+.......................................*/
+.khotba_inside ul li a:hover,
+.blog_info,
+.form-control:focus,
+.sidebar_nav ul li a:hover,
+.tag_cloud a:hover,
+#sj .irs--round .irs-handle,
+.product_action ul li a:hover,
+
+#back-top a,
+.page-item:hover .page-link, .page-item.active .page-link,
+blockquote span,
+.car-specification .contact-box .contact-details ul li span,
+.faqs .section-header .section-heading .input-group .form-control-custom,
+.sidebar_wrap .sidebar .sidebar_widgets .tags a:hover,
+.blog-detail .post-details-tags-social .tags a:hover,
+
+
+.btn-submit,
+.white-btn:hover, .white-btn:focus,
+.category-btn:hover, .category-btn:focus,
+footer .ft-social-media ul li:hover,
+span.add-product,
+.green-btn,
+.green-btn:hover, .green-btn:focus,
+#add-restaurent-tab .steps-2 > li.done a.add-res-tab, #add-restaurent-tab .steps-2 > li.active a.add-res-tab,
+.filter-sidebar .sidebar-tab .tab-content .siderbar-innertab>ul>li>a.active,
+.filters .rating button:hover,
+.custom-pagination .page-item.active .page-link,
+.custom-pagination .page-item .page-link:hover,
+label.custom-checkbox:hover input ~ .checkmark,
+.payment-option-tab>.nav>.nav-item>.nav-link.active,
+.driver-tip-sec>.nav>.nav-item>.nav-link.active,
+label.custom-checkbox input:checked ~ .checkmark{
+    border-color: #F7C59F;
+}
+
+.btn-submit:hover{
+  border-color:#b38766;
+}
+/*border left color*/
+
+.happyclients:before {
+    border-left-color: #F7C59F;
+}
+/*border left color*/
+
+.login-section .card,
+.tabs .nav-tabs .nav-item .nav-link:hover,
+ .tabs .nav-tabs .nav-item .nav-link,
+ .tabs .nav-tabs .nav-item .nav-link.active,
+ .form-control-custom:focus,
+
+
+ .parent-megamenu .megamenu .menu-style .menu-title .cat-name:before,
+ .restaurent-tabs .nav-pills .nav-link.active,
+ .filter-sidebar .sidebar-tab>ul>li>a.active{
+  border-bottom-color: #F7C59F;
+}
+
+.tabs .nav-tabs .nav-item .nav-link.active:before{
+border-top: 6px solid #F7C59F;
+}
+.filters .delivery-slider .irs--flat .irs-single:before{
+  border-top-color: #99C24D;
+}
+
+/* ....................................
+8. Border black
+.......................................*/
+.border-black,
+.menu-social li a,
+.input-border,
+.btn-filter.active,
+.btn-filter:hover,
+.video-area,
+.black-border,
+.inner-cart-box,
+.prdt-list-btns .btn-detail,
+.rate-img-bt .btn,
+#back-top a:hover,
+.heading-after .circle,
+
+.btn-submit:focus{
+    border-color: #201c15;
+}
+.cat-box .seprator:before,
+.cat-box .seprator:after{
+	border-color: #ffffff #F7C59F #ffffff
+}
+.promocode-btn a:hover{
+  color: #fff;
+}
