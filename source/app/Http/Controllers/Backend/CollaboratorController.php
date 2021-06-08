@@ -25,10 +25,10 @@ class CollaboratorController extends Controller
     {
         $restaurants = Restaurant::where('customer_id', Auth::id())->get();
         $restaurants_amount = Restaurant::where('customer_id', Auth::id())->count();
-        $foods_amount = Food::where('restaurant_id', 1)->get()->count();
+        $foods_amount = Food::where('restaurant_id', $restaurants[0]->id)->get()->count();
         $foodsPerPage = 5;
         $pages = ceil($foods_amount/$foodsPerPage);
-        $foods = Food::where('restaurant_id', 1)->skip(0)->take(5)->get();
+        $foods = Food::where('restaurant_id', $restaurants[0]->id)->skip(0)->take(5)->get();
         return view('backend.foods.list', ['restaurants' => $restaurants, 'restaurants_amount' => $restaurants_amount, 'pages' => $pages, 'foods' => $foods]);
     }
 
@@ -169,9 +169,9 @@ class CollaboratorController extends Controller
     public function getRestaurant($restaurant_id, $page)
     {   
         $restaurant = Restaurant::find($restaurant_id);
-        $restaurant->city = $restaurant->city->city_name; // lấy thông tin city
-        $restaurant->district = $restaurant->district->district_name; // lấy thông tin huyện
-        $restaurant->commune = $restaurant->commune->commune_name; // lấy thông tin xã
+        $restaurant->city; // lấy thông tin city
+        $restaurant->district; // lấy thông tin huyện
+        $restaurant->commune; // lấy thông tin xã
         $restaurant->amount = $restaurant->foods->count();
         $foods = Food::where('restaurant_id', $restaurant_id)->skip(($page-1)*5)->take(5)->get();
         foreach ($foods as $food) {

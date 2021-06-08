@@ -213,102 +213,45 @@
                               <ul>
                                   
                                     <li>
-                                        <a href="order-details.html">
+                                        <a href={{ route('collaborators.foods.index') }}>
                                             <div class="icon"><i class="flaticon-rewind"></i>
-                                            </div> <span class="details">Past Orders</span>
+                                            </div> <span class="details">Your restaurant</span>
                                         </a>
                                     </li> 
                                     <li>
-                                        <a href="#">
+                                        <a href={{ route('collaborators.restaurants.create') }}>
                                             <div class="icon"><i class="flaticon-user"></i>
-                                            </div> <span class="details">Account</span>
+                                            </div> <span class="details">New restaurant</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href={{ route('collaborators.foods.create') }}>
+                                            <div class="icon"><i class="flaticon-user"></i>
+                                            </div> <span class="details">New food</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href={{ route('customer.logout') }}>
+                                            <div class="icon"><i class="flaticon-user"></i>
+                                            </div> <span class="details">Logout</span>
                                         </a>
                                     </li>
                                 </ul>
-                                <div class="user-footer"> <a href="#">Sign Out</a>
                                 </div>
                                 
                               
                           </div>
-                      </div>
-                      <!-- mobile search -->
-                      <!-- user cart -->
-                      <div class="cart-btn cart-dropdown">
-                          <a href="#" class="text-light-green fw-700"> <i class="fas fa-shopping-bag"></i>
-                              <span class="user-alert-cart">3</span>
-                          </a>
-                          <div class="cart-detail-box">
-                              <div class="card">
-                                  <div class="card-header padding-15">Your Order</div>
-                                  <div class="card-body no-padding">
-                                      <div class="cat-product-box">
-                                          <div class="cat-product">
-                                              <div class="cat-name">
-                                                  <a href="#">
-                                                      <p class="text-light-green"><span class="text-dark-white">1</span> Chilli Chicken</p> <span class="text-light-white">small, chilli chicken</span>
-                                                  </a>
-                                              </div>
-                                              <div class="delete-btn">
-                                                  <a href="#" class="text-dark-white"> <i class="far fa-trash-alt"></i>
-                                                  </a>
-                                              </div>
-                                              <div class="price"> <a href="#" class="text-dark-white fw-500">
-                        $2.25
-                      </a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="cat-product-box">
-                                          <div class="cat-product">
-                                              <div class="cat-name">
-                                                  <a href="#">
-                                                      <p class="text-light-green"><span class="text-dark-white">1</span> loaded cheese</p> <span class="text-light-white">small, chilli chicken</span>
-                                                  </a>
-                                              </div>
-                                              <div class="delete-btn">
-                                                  <a href="#" class="text-dark-white"> <i class="far fa-trash-alt"></i>
-                                                  </a>
-                                              </div>
-                                              <div class="price"> <a href="#" class="text-dark-white fw-500">
-                        $2.25
-                      </a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="cat-product-box">
-                                          <div class="cat-product">
-                                              <div class="cat-name">
-                                                  <a href="#">
-                                                      <p class="text-light-green"><span class="text-dark-white">1</span> Tortia Chicken</p> <span class="text-light-white">small, chilli chicken</span>
-                                                  </a>
-                                              </div>
-                                              <div class="delete-btn">
-                                                  <a href="#" class="text-dark-white"> <i class="far fa-trash-alt"></i>
-                                                  </a>
-                                              </div>
-                                              <div class="price"> <a href="#" class="text-dark-white fw-500">
-                        $2.25
-                      </a>
-                                              </div>
-                                          </div>
-                                      </div>
-                                      <div class="item-total">
-                                          <div class="total-price border-0"> <span class="text-dark-white fw-700">Items subtotal:</span>
-                                              <span class="text-dark-white fw-700">$9.99</span>
-                                          </div>
-                                          <div class="empty-bag padding-15"> <a href="#">Empty bag</a>
-                                          </div>
-                                      </div>
-                                  </div>
-                                  <div class="card-footer padding-15"> <a href="checkout.html" class="btn-first green-btn text-custom-white full-width fw-500">Proceed to Checkout</a>
-                                  </div>
-                              </div>
-                          </div>
-                      </div>
-                      <!-- user cart -->
-                  </div>
+                          
               </div>
               @endauth
+              <div class="gem-points">
+                <a class="text-success" href={{ route('customer.login') }}>
+                    <span>Sign in</span>
+                </a>
+            </div>
+              @guest
+                  
+              @endguest
           </div>
       </div>
   </header>

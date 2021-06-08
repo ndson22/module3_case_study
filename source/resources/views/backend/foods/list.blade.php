@@ -53,7 +53,7 @@
                                         <div class="categories restaurants_info" name={{ $restaurant->id }}>
                                             <div class="icon text-custom-white bg-light-green ">
                                                 <img src={{ asset("storage/" . $restaurant->image) }} class="rounded-circle" alt="restaurants">
-                                            </div> <span class="text-light-black cat-name">{{ $restaurant->name }}</span>
+                                            </div> <span class="text-light-black cat-name text-success">{{ $restaurant->name }}</span>
                                         </div>
                                     </div>
                                 @endforeach
@@ -122,7 +122,7 @@
                             @endforeach
                         </div>
                         <div class="custom-pagination">
-                            <ul class="pagination" id="custom-pagination" data-restaurant-id="1">
+                            <ul class="pagination" id="custom-pagination" data-restaurant-id={{ $restaurants[0]->id }}>
                                 <li class="page-item">
                                     <a class="page-link -2" aria-label="Previous" > <span aria-hidden="true"  id="previous">&laquo;</span>
                                         <span class="sr-only" ">Previous</span>
@@ -154,55 +154,56 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Update food</h5>
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Update food</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <form method="POST" action="javascript:void(0)" enctype="multipart/form-data" id="foodEditForm" data-food-id="">
             @csrf
+            <div id="messageSuccess"></div>
             <div class="row">
                 <div class="mb-3 col-md-6" id="editFoodName">
-                    <label for="recipient-name" class="col-form-label">Name:</label>
+                    <label for="recipient-name" class="col-form-label text-success">Name:</label>
                     <input type="text" class="form-control" name="name">
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodRestaurant">
-                    <label for="recipient-name" class="col-form-label">Restaurant:</label>
+                    <label for="recipient-name" class="col-form-label text-success">Restaurant:</label>
                     <select class="form-control" name="restaurant_id"></select>
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodCategory">
-                    <label for="recipient-category" class="col-form-label">Category:</label>
+                    <label for="recipient-category" class="col-form-label text-success">Category:</label>
                     <select name="category_id" class="form-control"></select>
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodPrepare">
-                    <label for="recipient-name" class="col-form-label">Preparation time (minutes):</label>
+                    <label for="recipient-name" class="col-form-label text-success">Preparation time (minutes):</label>
                     <input type="text" class="form-control" name="prepare_food">
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodTags">
-                    <label for="editTags" class="col-form-label">Tags:</label>
+                    <label for="editTags" class="col-form-label text-success">Tags:</label>
                     <select name="tags[]" class="form-control" multiple="multiple" id="editTags"></select>
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodPrice">
-                    <label for="price" class="col-form-label">Price (VND):</label>
+                    <label for="price" class="col-form-label text-success">Price (VND):</label>
                     <input type="text" class="form-control" name="price">
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodSalePrice">
-                    <label for="price" class="col-form-label">Sale price (VND):</label>
+                    <label for="price" class="col-form-label text-success">Sale price (VND):</label>
                     <input type="text" class="form-control" name="sale_price">
                 </div>
                 <div class="mb-3 col-md-6" id="editFoodFee">
-                    <label for="fee" class="col-form-label">Fee (%):</label>
+                    <label for="fee" class="col-form-label text-success">Fee (%):</label>
                     <input type="text" class="form-control" name="fee" id="fee">
                 </div>
                 <div class="mb-3 col-md-12" id="editExplainFee">
-                    <label for="explain_fee" class="col-form-label">Explain fee:</label>
+                    <label for="explain_fee" class="col-form-label text-success">Explain fee:</label>
                     <textarea class="form-control" name="explain_fee" id="explain_fee"></textarea>
                 </div>
                 <div class="mb-3 col-md-12" id="editDescription">
-                    <label for="explain_fee" class="col-form-label">Description:</label>
+                    <label for="explain_fee" class="col-form-label text-success">Description:</label>
                     <textarea class="form-control" name="description" id="description"></textarea>
                 </div>
                 <div class="mb-3" id="editFoodImage">
-                    <label for="image" class="col-form-label">Food image:</label>
+                    <label for="image" class="col-form-label text-success">Food image:</label>
                     <input type="file" class=" form-control" data-default-file="" name="image" id="image">
                 </div>
             </div>    

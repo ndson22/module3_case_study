@@ -25,7 +25,7 @@ class StoreRestaurantRequest extends FormRequest
     {
         return [
             'name' => 'required|regex:/^[a-zA-z ]+$/|max:255',
-            'address' => 'required|alpha_num|max:255',
+            'address' => 'required|regex:/^[a-zA-Z0-9, ]+$/|max:255',
             'commune_id' => 'required',
             'district_id' => 'required',
             'city_id' => 'required',

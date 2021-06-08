@@ -59,7 +59,7 @@
                       </div>
                       @if (Session::has('success'))
                       <div class="form-group text-center">
-                        <p class="text-light-black mb-0">{{ Session::get('success') }} <a href="{{ route("customer.login") }}">Sign in now</a>
+                        <p class="text-light-black mb-0 text-success">{{ Session::get('success') }} <a href="{{ route("customer.login") }}">Sign in now</a>
                         </p>
                       </div>
                       @else
