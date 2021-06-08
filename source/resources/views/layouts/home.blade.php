@@ -49,6 +49,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js" integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css">
 </head>
 
 <body>
@@ -205,7 +207,7 @@
                       @auth
                       <div class="user-details p-relative">
                           <a href="#" class="text-light-white fw-500">
-                              <img src="assets/img/user-1.png" class="rounded-circle" alt="userimg"> <span>Hi, {{ Auth::user()->name }}</span>
+                            <span>Hi, {{ Auth::user()->name }}</span>
                           </a>
                           <div class="user-dropdown">
                               <ul>
@@ -312,7 +314,6 @@
   </header>
 </div>
 <div class="main-sec"></div>
-
     @yield("content")
 
     
@@ -337,13 +338,151 @@
 <!-- Munch Box Js -->
 <script src={{ URL("/assets/js/quickmunch.js") }}></script>
 <!-- /Place all Scripts Here -->
-    <!-- jQuery -->
     
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.js"></script>
+<script>
+    $('.dropify').dropify();
+  
+</script>
 <script src={{ asset("js/my.js") }}></script>
+<script>
+    function getFoodInfor (event) {
+        let foodId = event.target.getAttribute('data-food-id');
+        $.ajax({
+            url: '/collaborators/foods/' + foodId,
+            type: 'GET',
+            success: function (response) {
+                // console.log(response.food.tags);
+                $('#editFoodTags').find('select').empty(); // tránh bị duplicate
+                // Hien thi cac option 
+                let restaurantsHtml = []; //restaurant option
+                let categoriesHtml = []; // category option
+                let tagsHtml = []; // tag option
+                //restaurant option
+                $.each(response.restaurants, function (i, restaurant) {
+                    if (response.food.restaurant_id == restaurant.id) {
+                        restaurantsHtml.push('<option selected value="' + restaurant.id + '">' + restaurant.name + '</option>');
+                    } else {
+                        restaurantsHtml.push('<option value="' + restaurant.id + '">' + restaurant.name + '</option>');
+                    }
+                });
+    
+                //category option
+                $.each(response.categories, function (i, category) {
+                    if (response.food.category_id == category.id) {
+                        categoriesHtml.push('<option selected value="' + category.id + '">' + category.category_name + '</option>');
+                    } else {
+                        categoriesHtml.push('<option value="' + category.id + '">' + category.category_name + '</option>');
+                    }
+                });
+    
+                //tag option
+                $.each(response.tags, function (i, tag) {
+                    if ($.inArray(tag.id, response.foodTagId) > -1) {
+                        tagsHtml.push('<option selected="selected" value="' + tag.tag_name + '">' + tag.tag_name + '</option>');
+                    } else {
+                        tagsHtml.push('<option value="' + tag.tag_name + '">' + tag.tag_name + '</option>');
+                    }
+                }); 
+                $('#foodEditForm').attr('data-food-id', response.food.id);
+                $('#editFoodName').find('input').val(response.food.name);
+                $('#editFoodRestaurant').find('select').append(restaurantsHtml.join(""));
+                $('#editFoodCategory').find('select').append(categoriesHtml.join(""));
+                $('#editFoodPrepare').find('input').val(response.food.prepare_food);
+                $('#editFoodTags').find('select').append(tagsHtml.join(""));
+                $('#editFoodPrice').find('input').val(response.food.price);
+                $('#editFoodSalePrice').find('input').val(response.food.sale_price);
+                $('#editFoodFee').find('input').val(response.food.fee);
+                $('#editExplainFee').find('textarea').val(response.food.explain_fee);
+                $('#editDescription').find('textarea').val(response.food.description);
+                $('#editFoodImage').empty();
+                $('#editFoodImage').append('<label for="image" class="col-form-label">Food image:</label><input type="file" class=" form-control" data-default-file="http://127.0.0.1:8000/storage/' + response.food.image + '" name="image" id="image">')
+                $('#editFoodImage').find('input').dropify();
+            },
+            error: function () {
+                alert('Something wrong. Please try again');
+            }
+        });
+    }
+    function actionDelete(event){
+        event.preventDefault();
+        let page = $('#custom-pagination').find('.active').children().attr('id');
+        let urlRequest = "/collaborators/foods/delete/" + event.target.getAttribute('data-food-id') + "/" + page;
+        let that = $(this);
+            Swal.fire({
+                title: 'Are you sure?',
+                text: "You won't be able to revert this!",
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Yes, delete it!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    $.ajax({
+                        type: 'GET',
+                        url: urlRequest,
+                        async: true,
+                        success: function (data) {
+                            if(data.code==200){
+                                that.parent().parent().remove();
+                                Swal.fire(
+                                    'Deleted!',
+                                    'Your file has been deleted.',
+                                    'success'
+                                )
+                            }        
+                            updateListOfFoods (data);
+                        },
+                        error: function (data) {
+    
+                        }
+                    });
+                }
+            })
+    }
+    function updateListOfFoods (data) {
+        $(".food-list").empty(); // Xóa toàn bộ thông tin hiện tại
+        let foods = data.foods;
+        let html = [];
+        $.each(foods, function (i, food) {
+            html.push('<div class="' + food.id + '">');
+            html.push('<div class="product-list-view">');
+            html.push('<div class="product-list-info">');
+            html.push('<div class="product-list-img" id="food_img">');
+            html.push('<a href="#">');
+            html.push('<img src="' + 'http://127.0.0.1:8000/storage/' + food.image + '"class="img-fluid" alt="food image">');
+            html.push('</a></div></div>');
+            html.push('<div class="product-right-col"> <div class="product-list-details">  <div class="product-list-title"> <div class="product-info"> ');
+            html.push('<h6><a href="#" class="text-light-blue fw-600" id="food_name">' +  food.name + '</a></h6>');
+            html.push('<p class="text-light-white fs-12" id="food_category">' + food.categories.category_name + '</p>');
+            html.push('</div> </div>');
+            html.push('<div class="product-detail-right-box">  <div class="product-list-tags"> <span class="text-custom-white square-tag"> <img src="http://127.0.0.1:8000/assets/img/svg/004-leaf.svg" alt="tag"> </span>');
+            html.push('<span class="text-custom-white rectangle-tag bg-gradient-red" style=" text-decoration-line: line-through" id="food_price">' + food.price + ' VND</span>');
+            html.push('<span class="rectangle-tag bg-gradient-green text-custom-white" id="food_sale_price">' + food.sale_price + ' VND</span>');
+            html.push('</div>');
+            html.push('<div class="product-list-tags"> <span class="text-custom-white square-tag"> <img src="http://127.0.0.1:8000/assets/img/svg/005-chef.svg"  alt="tag"> </span>');
+            html.push('<span class="text-custom-white rectangle-tag bg-gradient-orange" id="prepare_food">' + food.prepare_food + ' minutes </span>');
+            html.push('</div>');
+            // Delete & edit button
+            html.push('<div class="product-list-label"> <span class="rectangle-tag bg-primary text-custom-white" data-bs-toggle="modal" data-bs-target="#editModal" data-food-id="' + food.id + '" onclick="getFoodInfor(event)">Edit</span> <span class="rectangle-tag bg-danger text-custom-white action-delete" data-food-id="' + food.id + '" onclick="actionDelete(event)">Delete</span> </div>');
+            html.push('</div> </div>');
+            html.push('<div class="product-list-bottom">  <div class="product-list-type" id="list_tags">');
+    
+            //Food tags
+            $.each(food.tags, function (i, tag) {
+                html.push('<span class="">' + "#"+ tag.tag_name + '</span>' + " ");
+            });
+            
+            html.push('</div> </div> </div> </div> </div>');
+        });
+        $('.food-list').append(html.join(""));
+    }
+</script>
 <script>
 @if(Session::has('message'))
 toastr.options =

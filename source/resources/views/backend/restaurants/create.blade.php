@@ -105,7 +105,10 @@
                                                             <div class="form-group">
                                                                 <label class="text-light-black fw-700">District</label>
                                                                 <select class="form-control form-control-submit custom-select-2 full-width" id="district" name="district_id">
-                                                                    <option value="0">Select District</option>                                                             
+                                                                    <option value="0">Select District</option>     
+                                                                    @foreach ($districts as $district)
+                                                                        <option value={{ $district->id }}>{{ $district->district_name }}</option>
+                                                                    @endforeach                                                        
                                                                 </select>
                                                                 @error('district')
                                                                 <p class="text-danger fw-700">{{ $message }}</p>
@@ -116,7 +119,10 @@
                                                             <div class="form-group">
                                                                 <label class="text-light-black fw-700">Commune</label>
                                                                 <select class="form-control form-control-submit custom-select-2 full-width" id="commune" name="commune_id">
-                                                                    <option value="0">Select Commune</option>                                                                
+                                                                    <option value="0">Select Commune</option>     
+                                                                    @foreach ($communes as $commune)
+                                                                        <option value={{ $commune->id }}>{{ $commune->commune_name }}</option>
+                                                                    @endforeach                                                              
                                                                 </select>
                                                                 @error('commune')
                                                                 <p class="text-danger fw-700">{{ $message }}</p>
@@ -199,7 +205,7 @@
                 </div>
             </div>
         </div>
+        
     </section>
-{{-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> --}}
 
 @endsection

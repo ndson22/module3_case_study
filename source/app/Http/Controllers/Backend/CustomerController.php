@@ -53,6 +53,7 @@ class CustomerController extends Controller
         $customer->name = $request->name;
         $customer->email = $request->email;
         $customer->password = Hash::make($request->password);
+        $customer->save();
         return redirect()->route('customer.register')->with('success', 'Register success!');
     }
 }
