@@ -244,13 +244,13 @@
                           
               </div>
               @endauth
+              
+              @guest
               <div class="gem-points">
-                <a class="text-success" href={{ route('customer.login') }}>
+                <a class="text-success " href={{ route('customer.login') }}>
                     <span>Sign in</span>
                 </a>
             </div>
-              @guest
-                  
               @endguest
           </div>
       </div>

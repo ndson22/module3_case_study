@@ -42,7 +42,7 @@
               <div class="overlay overlay-bg"></div>
           </div>
           <div class="swiper-slide slide-item">
-              <img src="assets/img/about/blog/1920x700/banner-6.jpg" class="img-fluid full-width" alt="Banner">
+              <img src={{ asset("assets/img/about/blog/1920x700/banner-6.jpg") }} class="img-fluid full-width" alt="Banner">
               <div class="transform-center">
                   <div class="container">
                       <div class="row justify-content-end">
@@ -79,56 +79,56 @@
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-1.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-1.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Italian </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-2.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-2.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Thai </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-3.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-3.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Chinese </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-4.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-4.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Mexican </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-5.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-5.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Indian </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-6.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-6.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Lebanese </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-7.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-7.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">Japanese </span>
                               </a>
                           </div>
                           <div class="swiper-slide">
                               <a href="restaurant.html" class="categories">
                                   <div class="icon text-custom-white bg-light-green ">
-                                      <img src="assets/img/restaurants/125x125/cuisine-8.jpg" class="rounded-circle" alt="categories">
+                                      <img src={{ asset("assets/img/restaurants/125x125/cuisine-8.jpg") }} class="rounded-circle" alt="categories">
                                   </div> <span class="text-light-black cat-name">American </span>
                               </a>
                           </div>
